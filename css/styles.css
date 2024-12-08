@@ -6,12 +6,44 @@ body {
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding-left: 0;
 }
 a {
   text-decoration: none;
 }
-.page-hader {
+p. {
+  margin: 0;
+}
+img {display: block;
+  max-width: 100%;
+}
+/* xxxxxxxxxx HADER xxxxxxxxxx */
+.section {
+  padding: 120px 0;
+}
+.container {
+  width: 1188px;
+  padding: 0 15px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.header {
   background-color: #fff;
+  border-bottom: 1px solid #e7e9fc;
+  
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  width: 1158px;
+  height: 72px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -22,28 +54,48 @@ a {
   text-transform: uppercase;
   color: #4d5ae5;
 }
+.header .logo {
+  margin-right: 76px;
+}
 .logo-header .logo-part {
   color: #2e2f42;
 }
 .page-footer .logo-part {
   color: #f4f4fd;
 }
-.nav-link {
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+.nav-item {
   font-weight: 500;
+  color: #2e2f42;
+}
+.nav-link {
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 24px 0;
+
 }
-.contacts {
-  font-style: normal;
+.contacts-list {
+  display: flex;
 }
+.contacts-item {
+  display: flex;
+  
+}
+
 .contacts-link {
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #434455;
+  gap: 40px;
+  display: flex;
 }
 
 .nav-link:hover,
@@ -52,8 +104,14 @@ a {
 .contacts-link:focus {
   color: #404bbf;
 }
+/* xxxxxxxxxx SOLUTIONS xxxxxxxxxx */
 .solutions {
   background-color: #2e2f42;
+  padding: 188px 0;
+}
+.solutions .container{
+  display: flex;
+  flex-direction: column;
 }
 .solutions-title {
   font-weight: 700;
@@ -62,6 +120,7 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  max-width: ;
 }
 
 .btn-order {
@@ -71,6 +130,12 @@ a {
   letter-spacing: 0.04em;
   background-color: #4d5ae5;
   color: #fff;
+  border: none;
+  border-radius: 4px;
+  max-width: 169px;
+  height: 56px;
+ 
+
 }
 button {
   cursor: pointer;
@@ -79,12 +144,40 @@ button {
 .btn-order:focus {
   background-color: #404bbf;
 }
+/* xxxxxxxxxx BENEFIT xxxxxxxxxx */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.benefits-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 24px;
+}
+.benefits-item {
+  width: calc((100%-72px)/4);
+}
+.benefits-list {
+  display: flex;
+
+}
 .benefits-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .benefits-text {
   font-weight: 400;
@@ -93,8 +186,13 @@ button {
   letter-spacing: 0.02em;
   color: #434455;
 }
+/* xxxxxxxxxx TEAM xxxxxxxxxx */
 .team {
   background-color: #f4f4fd;
+}
+.team-list {
+  display: flex;
+  gap: 24px;
 }
 .team-title {
   font-weight: 700;
@@ -104,9 +202,16 @@ button {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
+  text-align: center;
+  margin-bottom: 72px;
+}
+.team-descr-box {
+  text-align: center;
+  padding: 32px 0;
 }
 .team-item {
   background: #fff;
+
 }
 .team-name {
   font-weight: 500;
@@ -114,6 +219,7 @@ button {
   line-height: 120%;
   letter-spacing: 0.02em;
   color: #2e2f42;
+
 }
 .team-text {
   font-weight: 400;
@@ -122,6 +228,20 @@ button {
   letter-spacing: 0.02em;
   color: #434455;
 }
+/* xxxxxxxxxx PORTFOLIO xxxxxxxxxx */
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+.portfolio-list-item {
+  width: calc((100%-48px)/3);
+}
+.portfolio-descr-box {
+  padding: 32px 16px;
+}
+
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -130,6 +250,8 @@ button {
   text-transform: capitalize;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  text-align: center;
+  margin-bottom: 72px;
 }
 .portfolio-name {
   font-weight: 500;
@@ -146,13 +268,23 @@ button {
 
   color: #434455;
 }
-.page-footer {
+/* xxxxxxxxxx FOOTER xxxxxxxxx */
+.footer {
   background-color: #2e2f42;
+  padding: 100px 0;
 }
-.page-footer-text {
+.footer-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  max-width: 264px;
+}
+.footer .logo-part {
+  color: #f4f4fd;
+}
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
